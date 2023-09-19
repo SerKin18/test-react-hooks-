@@ -1,19 +1,7 @@
 import React from "react";
-import { useState } from "react";
-import './product-button.css'
+import "./product-button.css";
 
-const ProductButton=()=>{
-	const [cheapest, setCheapest] = useState(false);
-function bayChepeast(){
-	setCheapest(!cheapest)
-	
-}
-	return(
-		<div className="btn">
-			<button className="btn_cheap" onClick={()=>bayChepeast()}>
-				Bay cheapest
-			</button>
-		</div>
-	)
-}
-export default ProductButton
+const ProductButton = () => {
+  return <button className="btn_cheap">Bay cheapest</button>;
+};
+export default ProductButton;

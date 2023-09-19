@@ -1,10 +1,6 @@
-.btn{
-	margin: 69px 0px 0px 0px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-}
+
 .btn_cheap{
+	margin-top: 69px;
 	color: #50DAA8;
 	border: 1px solid #00000041;
 	border-radius: 16px;
@@ -17,4 +13,14 @@
 	background-color: #50DAA8;
 	color:white;
 	border: 1px solid #50DAA8;
+}
+@media (max-width:950px){
+	.btn{
+		width: 100%;
+		margin: 10px 0px 0px 0px;
+	}
+	.btn_cheap{
+		padding: 16px 28px;
+		font-size: 20px;
+	}
 }
