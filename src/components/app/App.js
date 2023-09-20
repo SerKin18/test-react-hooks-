@@ -26,6 +26,7 @@ export function App() {
     const productItem = products.filter((item) => item.id === id);
     setProductBuy(productItem);
   };
+
   const cheapestProduct = () => {};
   return (
     <div className="App">
