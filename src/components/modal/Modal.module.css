@@ -87,7 +87,7 @@
   font-size: 30px;
   line-height: 35.16px;
 }
-.form-modal {
+.form_modal {
   margin: 16px 0px 0px 0px;
 }
 .input_modal {
@@ -98,10 +98,7 @@
   border: 1px solid #00000086;
   border-radius: 16px;
 }
-.name_input {
-}
-.number_input {
-}
+
 .button_modal {
   width: 288px;
   border: 1px solid #00000086;
@@ -136,9 +133,7 @@ margin: 20px 0px 0px 0px;
 	.price_modal span{
 		font-size: 40px;
 	}
-	.form-modal {
 
-	}
 	.input_modal {
 		max-width: 100%;
 		padding: 10px;

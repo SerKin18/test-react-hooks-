@@ -1,4 +1,9 @@
-
+.btn{
+	display: flex;
+	width: 100%;
+	align-items: center;
+	justify-content: center;
+}
 .btn_cheap{
 	margin-top: 69px;
 	color: #50DAA8;
@@ -14,12 +19,17 @@
 	color:white;
 	border: 1px solid #50DAA8;
 }
+@media (max-width:1420px){
+
+}
 @media (max-width:950px){
 	.btn{
 		width: 100%;
 		margin: 10px 0px 0px 0px;
 	}
 	.btn_cheap{
+		max-width: 100%;
+		margin: 10px 0px 0px 0px;
 		padding: 16px 28px;
 		font-size: 20px;
 	}

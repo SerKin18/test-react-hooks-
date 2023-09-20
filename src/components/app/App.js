@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from "react";
 import "./App.css";
-import ProductList from "../product-list/product-list";
-import Modal from "../modal/modal";
+import{ ProductList} from "../productList/ProductList"
+import {Modal} from "../modal/Modal";
 import { getData } from "../../api";
 import { Spinner } from "../spinner/Spinner";
 
-function App() {
+export function App() {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(false);
+
   useEffect(() => {
     setLoading(true);
     getData().then((data) => {
@@ -24,4 +25,4 @@ function App() {
   );
 }
 
-export default App;
+

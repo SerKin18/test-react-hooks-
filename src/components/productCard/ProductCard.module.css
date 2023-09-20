@@ -1,0 +1,116 @@
+.product_card__body {
+  width: 288px;
+  border-radius: 24px;
+  background-color: #ffffff;
+  padding: 32px;
+  color: black;
+  font-weight: 400;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 20px 24px;
+}
+
+.header_subTittle {
+  text-transform: uppercase;
+  opacity: 50%;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 4%;
+}
+.header_tittle {
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 48px;
+  letter-spacing: -2%;
+  margin-top: 8px;
+}
+.product-card__footer {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  margin-top: 40px;
+}
+.footer_price {
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-between;
+}
+.footer_price span {
+  position: relative;
+  font-weight: 400;
+  font-size: 60px;
+  line-height: 72px;
+  letter-spacing: -2%;
+  padding: 0px 0px 0px 15px;
+}
+.footer_price span::before {
+  position: absolute;
+  top: 15px;
+  left: 0;
+  content: "$";
+  display: inline-block;
+  height: 10px;
+  /*  */
+  font-size: 30px;
+  line-height: 35.16px;
+}
+.footer_button {
+  border: 1px solid #0000005b;
+  border-radius: 16px;
+  padding: 16px;
+  text-transform: uppercase;
+  font-weight: 500;
+  line-height: 24px;
+  font-size: 16px;
+  color: #4bcfa0;
+  margin: 8px 0px 8px 0px;
+}
+.active {
+  background-color: #4bcfa0;
+  color: white;
+  border: 1px solid #4bcfa0;
+}
+.footer_button:hover {
+  background-color: #4bcfa0;
+  color: white;
+  border: 1px solid #4bcfa0;
+}
+@media (max-width: 950px) {
+  .product_card__body {
+    width: 150px;
+    padding: 10px;
+    margin: 10px;
+  }
+  .header_subTittle {
+    font-size: 16px;
+  }
+  .header_tittle {
+    font-size: 25px;
+  }
+  .footer_price {
+    margin-top: 0px;
+  }
+  .footer_price span {
+    font-size: 36px;
+  }
+  .footer_price span::before {
+    font-size: 25px;
+    top: 15px;
+    left: 0;
+  }
+  .footer_button {
+    padding: 10px;
+  }
+}
+@media (max-width: 500px) {
+  .product_card__body {
+	width: 80%;
+  flex-direction: row;
+ 
+  
+  }
+  .footer_price{
+	flex-direction: column;
+  }
+}
