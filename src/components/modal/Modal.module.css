@@ -1,5 +1,5 @@
-.modal-window {
-  display: none;
+.modal_window {
+  display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
@@ -20,7 +20,7 @@
   position: relative;
   text-align: center;
   padding: 10px;
-  margin: 10px ;
+  margin: 10px;
 }
 .escape_modal {
   cursor: pointer;
@@ -83,65 +83,67 @@
   content: "$";
   display: inline-block;
   height: 10px;
-  /*  */
   font-size: 30px;
   line-height: 35.16px;
 }
 .form_modal {
-  margin: 16px 0px 0px 0px;
+  margin-top: 16px;
+  max-width: 100%;
 }
 .input_modal {
   display: block;
-  margin: 16px 50px 0px 50px;
-  width: 288px;
-  padding: 16px;
-  border: 1px solid #00000086;
+  margin: 16px 0px 0px 0px;
+  width: 256px;
+  padding: 19px;
+  border: 1px solid #00000020;
   border-radius: 16px;
+}
+.input_modal::placeholder {
+  color: #00000050;
 }
 
 .button_modal {
   width: 288px;
   border: 1px solid #00000086;
   border-radius: 16px;
-  padding: 16px;
+  padding: 15px;
   text-transform: uppercase;
   font-weight: 500;
   line-height: 24px;
   font-size: 16px;
   color: #4bcfa0;
-margin: 20px 0px 0px 0px;
+  margin: 32px 0px 0px 0px;
 }
 .button_modal:hover {
   background-color: #4bcfa0;
   color: white;
   border: 1px solid #4bcfa0;
 }
-@media (max-width:630px){
-	.modal_body {
-		display: flex;
-		max-width: 100%;
-		height: 100%;
+@media (max-width: 630px) {
+  .modal_body {
+    display: flex;
+    max-width: 80%;
+    height: 100%;
+  }
+  .subTitle_modal {
+    margin: 20px 0px 0px 0px;
+  }
+  .title_modal {
+    font-size: 25px;
+    margin: 0px;
+  }
+  .price_modal span {
+    font-size: 40px;
+  }
 
-	}
-	.subTitle_modal{
-		margin: 20px 0px 0px 0px;
-	}
-	.title_modal {
-		font-size: 25px;
-		margin: 0px;
-	}
-	.price_modal span{
-		font-size: 40px;
-	}
-
-	.input_modal {
-		max-width: 100%;
-		padding: 10px;
-		margin: 10px 0px;
-	}
-	.button_modal {
-		max-width: 100%;
-		padding: 10px 10px ;
-		margin: 10px 0px 30px 0px;
-	}
+  .input_modal {
+    max-width: 90%;
+    padding: 10px;
+    margin: 10px 0px;
+  }
+  .button_modal {
+    max-width: 70%;
+    padding: 10px 10px;
+    margin: 10px 0px 30px 0px;
+  }
 }
