@@ -1,9 +1,12 @@
 import React, { useEffect, useState } from "react";
+import ReactDOM from "react-dom";
 import "./App.css";
 import { ProductList } from "../productList/ProductList";
 import { Modal } from "../modal/Modal";
 import { getData } from "../../api";
 import { Spinner } from "../spinner/Spinner";
+
+const portal = document.getElementById("modal");
 
 export function App() {
   const [products, setProducts] = useState([]);
@@ -27,7 +30,12 @@ export function App() {
     setProductBuy(productItem);
   };
 
-  const cheapestProduct = () => {};
+  const cheapestProduct = () => {
+    const cheap = products.reduce((a, b) => {
+      return a.price < b.price ? a.price : b.price;
+    });
+    return cheap;
+  };
   return (
     <div className="App">
       {loading ? (
@@ -40,9 +48,14 @@ export function App() {
           cheapestProduct={cheapestProduct}
         />
       )}
-      {modal ? (
-        <Modal toggleModal={toggleModal} productBuy={productBuy} />
-      ) : null}
+      <>
+        {modal
+          ? ReactDOM.createPortal(
+              <Modal toggleModal={toggleModal} productBuy={productBuy} />,
+              portal
+            )
+          : null}
+      </>
     </div>
   );
 }

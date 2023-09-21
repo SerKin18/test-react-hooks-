@@ -1,9 +1,9 @@
-import React from "react";
-
+import React, { useEffect, useState } from "react";
 import style from "./Modal.module.css";
 
 export const Modal = ({ toggleModal, productBuy }) => {
   const product = productBuy[0];
+  console.log(product);
 
   return (
     <>

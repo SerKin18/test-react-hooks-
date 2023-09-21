@@ -18,9 +18,9 @@
   flex-direction: column;
   background-color: #ffffff;
   position: absolute;
-  top:50%;
-  left:50%;
-  transform: translate(-50%,-50%);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   text-align: center;
   padding: 10px;
   margin: 10px;
@@ -104,7 +104,18 @@
 .input_modal::placeholder {
   color: #00000050;
 }
+.active {
+  border: 1px solid #50daa8;
+}
+.input_modal_false {
+  display: block;
+  margin: 16px 0px 0px 0px;
+  width: 256px;
+  padding: 19px;
 
+  border-radius: 16px;
+  border: 1px solid #e43f3f;
+}
 .button_modal {
   width: 288px;
   border: 1px solid #00000086;
