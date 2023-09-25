@@ -5,10 +5,15 @@
   flex-wrap: wrap;
   flex-direction: row;
   background-color: #f2f2f2;
-  justify-content: center;
+  margin: 0px 0px 0px 0px;
 }
 .product_list li {
   list-style: none;
+}
+@media (max-width: 1450px){
+	.product_list {
+		justify-content: center;
+	}
 }
 @media (max-width: 500px) {
   .product_list {

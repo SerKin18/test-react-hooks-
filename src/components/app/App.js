@@ -3,6 +3,7 @@ import ReactDOM from "react-dom";
 import "./App.css";
 import { ProductList } from "../productList/ProductList";
 import { Modal } from "../modal/Modal";
+import { ModalCard } from "../modalCard/ModalCard"
 import { getData } from "../../api";
 import { Spinner } from "../spinner/Spinner";
 
@@ -51,7 +52,9 @@ export function App() {
       <>
         {modal
           ? ReactDOM.createPortal(
-              <Modal toggleModal={toggleModal} productBuy={productBuy} />,
+              <Modal toggleModal={toggleModal}>
+                <ModalCard  productBuy={productBuy} />
+              </Modal>,
               portal
             )
           : null}
