@@ -1,6 +1,21 @@
 
+
+.modal_body {
+	display: flex;
+	border-radius: 24px;
+	align-items: center;
+	flex-direction: column;
+	background-color: #ffffff;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+	padding:53px 48px 66px 48px;
+	margin: 10px;
+ }
  .subTitle_modal {
-	margin-top: 52px;
+
 	text-transform: uppercase;
 	opacity: 50%;
 	font-size: 16px;
@@ -8,13 +23,11 @@
 	letter-spacing: 4%;
  }
  .title_modal {
-	margin-top: 16px;
-	font-family: Roboto, sans-serif;
 	font-weight: 400;
 	font-size: 40px;
 	line-height: 48px;
 	letter-spacing: -2%;
-	margin: 8px 0px 16px 0px;
+	margin-bottom:16px;
  }
  .price_modal span {
 	position: relative;
@@ -34,4 +47,31 @@
 	font-size: 30px;
 	line-height: 35.16px;
  }
- 
+ .escape_modal {
+	cursor: pointer;
+	position: absolute;
+	top: -20px;
+	right: -16px;
+	width: 40px;
+	height: 40px;
+	background-color: #f2f2f2;
+	border-radius: 50%;
+	z-index: 1;
+ }
+ .escape_modal::before,
+ .escape_modal::after {
+	top: 17px;
+	right: 8px;
+	content: "";
+	position: absolute;
+	width: 24px;
+	height: 4px;
+	border-radius: 3px;
+	background: rgb(0, 0, 0);
+ }
+ .escape_modal::before {
+	transform: rotate(45deg);
+ }
+ .escape_modal::after {
+	transform: rotate(-45deg);
+ }

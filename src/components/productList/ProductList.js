@@ -3,7 +3,7 @@ import style from "./ProductList.module.css";
 import { ProductButton } from "../productButton/ProductButton";
 import { ProductCard } from "../productCard/ProductCard";
 
-export const ProductList = ({ products, toggleModal, modalProduct, cheapestProduct }) => {
+export const ProductList = ({ products, toggleModal, modalProduct,toggleModalCheap,cheapestProduct}) => {
 	if (!products?.length) {
 		return <h3>List is empty</h3>;
 	}
@@ -14,9 +14,9 @@ export const ProductList = ({ products, toggleModal, modalProduct, cheapestProdu
 	}
 	return (
 		<ul className={style.product_list}>
-			{products.map((item) => {
+			{products.map((item,i) => {
 				return (
-					<li>
+					<li key={i}>
 						<ProductCard
 							name={item.name}
 							category={item.category}
@@ -27,7 +27,7 @@ export const ProductList = ({ products, toggleModal, modalProduct, cheapestProdu
 					</li>
 				);
 			})}
-			<ProductButton cheapestProduct={cheapestProduct} />
+			<ProductButton cheapestProduct={cheapestProduct} toggleModalCheap={toggleModalCheap} />
 		</ul>
 	);
 };
