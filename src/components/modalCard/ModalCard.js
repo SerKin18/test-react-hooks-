@@ -15,7 +15,6 @@ export const ModalCard = ({ productBuy, toggleModal, children }) => {
         <span>{product.price}</span>
         {children}
       </div>
-
       <ModalInput toggleModal={toggleModal} />
     </div>
   );

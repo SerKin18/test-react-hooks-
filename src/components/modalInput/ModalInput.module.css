@@ -17,11 +17,10 @@
 	border: 1px solid #50daa8;
  }
  .input_modal_false {
- 
-	margin: 16px 0px 10px 0px;
+	display: block;
+	margin: 16px 0px 0px 0px;
 	width: 256px;
 	padding: 19px;
- 
 	border-radius: 16px;
 	border: 1px solid #e43f3f;
  }

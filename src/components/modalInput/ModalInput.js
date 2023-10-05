@@ -18,17 +18,19 @@ export const ModalInput = ({ toggleModal }) => {
     }
   };
   const nameHandler = (e) => {
-    setName(e.target.value);
     console.log(e.target.value);
-    if (typeof e.target.value == number) {
+    if (e.target.value ===  ' ' || e.target.value.search(/\d/) !== -1) {
+		setNumberDirty(true)
       setNameError("Only letters allowed");
     } else {
+		setName(e.target.value);
       setNameError("");
     }
   };
   const numberHandler = (e) => {
-    setNumber(e.target.value);
-    if (typeof Number(e.target.value) === "string") {
+    if(e.target.value !== '' || ' '){
+	setNumber(e.target.value);}
+    if (e.target.value.search(/\D/) !== -1) {
       setNumberError("Only numbers allowed");
     }
     if (e.target.value.length < 12 || e.target.value.length > 12) {
@@ -37,6 +39,15 @@ export const ModalInput = ({ toggleModal }) => {
       setNumberError("");
     }
   };
+
+  const closeOrder = () => {
+	if (name !== '' && nameDirty && numberDirty && nameError === '' && numberError === '') {
+      console.log(`{
+			name: ${name}
+			number:${number}
+		}`);
+  }};
+  const styleError = { color: "red", textAlign: "start" };
 
   return (
     <>
@@ -49,27 +60,32 @@ export const ModalInput = ({ toggleModal }) => {
           name="name"
           value={name}
           placeholder="Name"
-          className={style.input_modal}
+          className={
+            nameDirty && nameError ? style.input_modal_false : style.input_modal
+          }
         ></input>
-        {nameDirty && nameError && (
-          <div style={{ color: "red", textAlign: "start" }}>{nameError}</div>
-        )}
+        {nameDirty && nameError && <div style={styleError}>{nameError}</div>}
         <input
           id="input-number"
           onChange={(e) => numberHandler(e)}
           onBlur={(e) => blurHandler(e)}
           type="number"
           name="number"
+          value={number}
           placeholder="Number"
-          className={style.input_modal}
+          className={
+            numberDirty && numberError
+              ? style.input_modal_false
+              : style.input_modal
+          }
         ></input>
         {numberDirty && numberError && (
-          <div style={{ color: "red", textAlign: "start" }}>{numberError}</div>
+          <div style={styleError}>{numberError}</div>
         )}
         <button
           type="submit"
           className={style.button_modal}
-          onClick={toggleModal}
+          onClick={closeOrder}
         >
           order
         </button>
@@ -77,5 +93,3 @@ export const ModalInput = ({ toggleModal }) => {
     </>
   );
 };
-
-
