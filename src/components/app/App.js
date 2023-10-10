@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 
 import "./App.css";
 import { ProductList } from "../productList/ProductList";
-import { Modal2 } from "../modal/Modal";
+import { Modal2 } from "../modal/modal";
 import { ModalCard } from "../modalCard/ModalCard"
 import { getData } from "../../api";
 import { Spinner } from "../spinner/Spinner";

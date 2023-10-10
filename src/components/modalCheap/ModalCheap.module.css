@@ -1,17 +1,16 @@
 .modal_window {
 	display: flex;
-	justify-content: center;
-	align-items: center;
 	width: 100%;
 	min-height: 100vh;
 	background-color: rgba(0, 0, 0, 0.801);
-	position: absolute;
+	position: fixed;
 	top: 0;
 	left: 0;
-	bottom: 0;
+	bottom:0;
 	right: 0;
 	padding: 10px ;
-	overflow-y:hidden;
+	height: 100vh;
+	overflow-y: hidden;
  }
  .footer_button {
 	border: 1px solid #0000005b;
@@ -22,7 +21,7 @@
 	line-height: 24px;
 	font-size: 16px;
 	color: #4bcfa0;
-	margin: 0px 0px 8px 70px;
+	margin: 0px 0px 0px 70px;
  }
  .active {
 	background-color: #4bcfa0;
@@ -33,4 +32,66 @@
 	background-color: #4bcfa0;
 	color: white;
 	border: 1px solid #4bcfa0;
+ }
+ .subTitle_modal {
+
+	text-transform: uppercase;
+	opacity: 50%;
+	font-size: 16px;
+	line-height: 24px;
+	letter-spacing: 4%;
+ }
+ .title_modal {
+	font-weight: 400;
+	font-size: 40px;
+	line-height: 48px;
+	letter-spacing: -2%;
+	margin-bottom:16px;
+ }
+
+ .price_modal span {
+	position: relative;
+	font-weight: 400;
+	font-size: 60px;
+	line-height: 72px;
+	letter-spacing: -2%;
+	padding: 0px 0px 0px 15px;
+ }
+ .price_modal span::before {
+	position: absolute;
+	top: 7px;
+	left: 0;
+	content: "$";
+	display: inline-block;
+	height: 10px;
+	font-size: 30px;
+	line-height: 35.16px;
+ }
+ .escape_modal {
+	cursor: pointer;
+	position: absolute;
+	top: -20px;
+	right: -16px;
+	width: 40px;
+	height: 40px;
+	background-color: #f2f2f2;
+	border-radius: 50%;
+	z-index: 1;
+ }
+ .escape_modal::before,
+ .escape_modal::after {
+	top: 17px;
+	right: 8px;
+	content: "";
+	position: absolute;
+	width: 24px;
+	height: 4px;
+	border-radius: 3px;
+	background: rgb(0, 0, 0);
+ }
+ .escape_modal::before {
+	transform: rotate(45deg);
+ }
+ .escape_modal::after {
+	transform: rotate(-45deg);
  }

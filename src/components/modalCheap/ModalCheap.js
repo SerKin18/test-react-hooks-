@@ -6,6 +6,8 @@ import { ModalCard } from "../modalCard/ModalCard";
 
 const portal = document.getElementById("modal");
 export const ModalCheap = ({ isOpen, toggleModalCheap, cheapestProduct }) => {
+  const product = cheapestProduct;
+  console.log(product);
   return isOpen
     ? ReactDOM.createPortal(
         <>
@@ -14,9 +16,10 @@ export const ModalCheap = ({ isOpen, toggleModalCheap, cheapestProduct }) => {
             productBuy={cheapestProduct}
             toggleModal={toggleModalCheap}
           >
-            <button type="button" className={style.footer_button}>
-              buy
-            </button>
+            <div
+              onClick={toggleModalCheap}
+              className={style.escape_modal}
+            ></div>
           </ModalCard>
         </>,
         portal
