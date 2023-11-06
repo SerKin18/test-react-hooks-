@@ -2,19 +2,11 @@ import React, { useEffect, useState } from "react";
 
 import "./App.css";
 import { ProductList } from "../ProductList/ProductList";
-<<<<<<< HEAD
-import { Modal2 } from "../Modal/Modal";
-import { ModalCard } from "../ModalCard/ModalCard";
-import { getData } from "../../Api";
-import { Spinner } from "../Spinner/Spinner";
-import { ModalCheap } from "../ModalCheap/ModalCheap";
-=======
 import { Modal } from "../Modal/Modal";
 import { ModalCard } from "../ModalCard/ModalCard";
 import { getData } from "../../Api";
 import { Spinner } from "../Spinner/Spinner";
 // import { ModalCheap } from "../ModalCheap/ModalCheap";
->>>>>>> f8c2fb2f3ea5655e3e63f2a9e15c8d05ecbd2ba7
 
 export function App() {
   const [products, setProducts] = useState([]);
@@ -41,10 +33,11 @@ export function App() {
 
   const cheapestProduct = () => {
     let cheap = [];
-    const cheapItem = products.reduce((a, b) => {
-      return a.price < b.price ? a : b;
-    });
-    cheap.push(cheapItem);
+    cheap.push(
+      products.reduce((a, b) => {
+        return a.price < b.price ? a : b;
+      })
+    );
     setProductBuy(cheap);
   };
   console.log(productBuy);

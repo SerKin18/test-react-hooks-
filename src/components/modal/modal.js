@@ -8,14 +8,14 @@ export const Modal = ({
   children,
   toggleModal,
   isOpenCheap,
-  toggleModalCheap,
+  
 }) => {
   return isOpen || isOpenCheap
     ? ReactDOM.createPortal(
         <>
           <div
             className={style.modal_window}
-            onClick={toggleModal || toggleModalCheap}
+            onClick={toggleModal}
           ></div>
           {children}
         </>,
