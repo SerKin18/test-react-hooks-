@@ -3,11 +3,20 @@ import ReactDOM from "react-dom";
 import style from "./Modal.module.css";
 
 const portal = document.getElementById("modal");
-export const Modal2 = ({ isOpen, children, toggleModal }) => {
-  return isOpen
+export const Modal = ({
+  isOpen,
+  children,
+  toggleModal,
+  isOpenCheap,
+  toggleModalCheap,
+}) => {
+  return isOpen || isOpenCheap
     ? ReactDOM.createPortal(
         <>
-          <div className={style.modal_window} onClick={toggleModal}></div>
+          <div
+            className={style.modal_window}
+            onClick={toggleModal || toggleModalCheap}
+          ></div>
           {children}
         </>,
         portal
