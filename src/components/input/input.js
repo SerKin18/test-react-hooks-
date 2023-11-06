@@ -1,6 +1,6 @@
 import React from "react";
 
-import style from "./input.module.css";
+import style from "./Input.module.css";
 
 const Input = ({ name, type, value, isError, isSuccess, onChange, onBlur }) => {
   console.log(isError);

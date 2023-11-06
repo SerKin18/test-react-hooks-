@@ -1,9 +1,10 @@
 import React from "react";
 import style from "./ModalCard.module.css";
-import { ModalInput } from "../modalInput/ModalInput";
+import { ModalInput } from "../ModalInput/ModalInput";
 
-export const ModalCard = ({ productBuy, toggleModal, children }) => {
+export const ModalCard = ({ productBuy, toggleModal}) => {
   const product = productBuy;
+ 
   return (
     <div className={style.modal_body}>
       <i className={style.escape_modal} onClick={toggleModal}></i>
@@ -12,8 +13,8 @@ export const ModalCard = ({ productBuy, toggleModal, children }) => {
       <div className={style.price_modal}>
         <span>{product.price}</span>
       </div>
-      {children}
-      <ModalInput toggleModal={toggleModal} />
+      
+      <ModalInput toggleModal={toggleModal } />
     </div>
   );
 };

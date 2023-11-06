@@ -1,10 +1,10 @@
 import React from "react";
 import style from "./ProductButton.module.css";
 
-export const ProductButton = ({cheapestProduct,toggleModalCheap}) => {
+export const ProductButton = ({cheapestProduct,toggleModal}) => {
 const getCheapProduct=()=>{
 	cheapestProduct()
-	toggleModalCheap()
+	toggleModal()
 }
   return (
     <div className={style.btn}>

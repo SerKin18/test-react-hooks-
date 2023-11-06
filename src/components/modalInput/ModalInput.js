@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import style from "./ModalInput.module.css";
-import Input from "../input/input";
+import Input from "../Input/Input";
 
 export const ModalInput = ({ toggleModal }) => {
   const [name, setName] = useState("");

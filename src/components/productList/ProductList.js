@@ -1,9 +1,9 @@
 import React from "react";
 import style from "./ProductList.module.css";
-import { ProductButton } from "../productButton/ProductButton";
-import { ProductCard } from "../productCard/ProductCard";
+import { ProductButton } from "../ProductButton/ProductButton";
+import { ProductCard } from "../ProductCard/ProductCard";
 
-export const ProductList = ({ products, toggleModal, modalProduct,toggleModalCheap,cheapestProduct}) => {
+export const ProductList = ({ products, toggleModal, modalProduct,cheapestProduct}) => {
 	if (!products?.length) {
 		return <h3>List is empty</h3>;
 	}
@@ -27,7 +27,7 @@ export const ProductList = ({ products, toggleModal, modalProduct,toggleModalChe
 					</li>
 				);
 			})}
-			<ProductButton cheapestProduct={cheapestProduct} toggleModalCheap={toggleModalCheap} />
+			<ProductButton cheapestProduct={cheapestProduct} toggleModal={toggleModal} />
 		</ul>
 	);
 };
