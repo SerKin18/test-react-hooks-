@@ -1,7 +1,7 @@
 import React from "react";
 import style from "./ProductList.module.css";
-import { ProductButton } from "../productButton/ProductButton";
-import { ProductCard } from "../productCard/ProductCard";
+import { ProductButton } from "../ProductButton/ProductButton";
+import { ProductCard } from "../ProductCard/ProductCard";
 
 export const ProductList = ({ products, toggleModal, modalProduct,toggleModalCheap,cheapestProduct}) => {
 	if (!products?.length) {

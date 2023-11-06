@@ -1,9 +1,16 @@
 import React from "react";
 
-import style from "./input.module.css";
+import style from "./Input.module.css";
 
-const Input = ({ name, type, value, isError, isSuccess, onChange, onBlur }) => {
-  console.log(isError);
+const Input = ({
+  name,
+  type = "text",
+  value,
+  isError,
+  isSuccess,
+  onChange,
+  onBlur,
+}) => {
   let inputStyle = style.input_modal;
 
   if (isError) {
@@ -12,14 +19,13 @@ const Input = ({ name, type, value, isError, isSuccess, onChange, onBlur }) => {
   if (isSuccess) {
     inputStyle = style.input_modal_success;
   }
-
   return (
     <label className={style.input_field}>
       <input
         id={`input-${name}`}
         onChange={onChange}
         onBlur={onBlur}
-        type={type === "number" ? "number" : "text"}
+        type={type}
         name={name === "Name" ? "Name" : "Number"}
         value={value}
         placeholder={name}

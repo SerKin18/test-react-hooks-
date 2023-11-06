@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import style from "./ModalCheap.module.css";
 
-import { ModalCard } from "../modalCard/ModalCard";
+import { ModalCard } from "../ModalCard/ModalCard";
 
 const portal = document.getElementById("modal");
 export const ModalCheap = ({ isOpen, toggleModalCheap, cheapestProduct }) => {

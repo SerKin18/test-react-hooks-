@@ -1,6 +1,6 @@
 import React from "react";
 import style from "./ModalCard.module.css";
-import { ModalInput } from "../modalInput/ModalInput";
+import { ModalInput } from "../ModalInput/ModalInput";
 
 export const ModalCard = ({ productBuy, toggleModal, children }) => {
   const product = productBuy;
