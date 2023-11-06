@@ -19,11 +19,19 @@
 .active {
   border: 1px solid #50daa8;
 }
+.input_modal_false {
+  position: relative;
+  display: block;
+  margin: 16px 0px 0px 0px;
+  width: 256px;
+  padding: 19px;
+  border-radius: 16px;
+  border: 1px solid #e43f3f;
+}
 
 .button_modal {
   width: 288px;
   border: 1px solid #00000086;
-  position:relative;
   border-radius: 16px;
   padding: 15px;
   text-transform: uppercase;
@@ -39,15 +47,13 @@
   border: 1px solid #4bcfa0;
   
 }
-
-
 .button_modal:hover .arrow_right {
 	content: "";
 display: inline-block;
 position: relative;
-	width: 14px;
+	width: 12px;
 	height: 2px;
-	background-color:rgb(255, 255, 255);
+	background-color:rgb(248, 245, 245);
 	margin: 0px 0px 5px 10px;
 	border-radius:2px;
 	top:0;
@@ -59,7 +65,7 @@ position: absolute;
 	width: 8px;
 	height: 2px;
 	border-radius:2px;
-	background-color:rgb(255, 255, 255);
+	background-color:rgb(248, 245, 245);
 
 	
  }
@@ -73,6 +79,35 @@ position: absolute;
 	right:-1px;
 	transform: rotate(-45deg);
  }
+
+.error_input {
+  cursor: pointer;
+  position: absolute;
+  top: 48%;
+  right: 60px;
+  width: 24px;
+  height: 24px;
+  background-color: #fc0404;
+  border-radius: 50%;
+  z-index: 1;
+}
+.error_input__value::before,
+.error_input__value::after {
+  top: 11px;
+  right: 2px;
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 2px;
+  border-radius: 1px;
+  background: rgb(252, 251, 251);
+}
+.error_input__value::before {
+  transform: rotate(45deg);
+}
+.error_input__value::after {
+  transform: rotate(-45deg);
+}
 
 @media (max-width: 630px) {
   .modal_body {
@@ -96,5 +131,9 @@ position: absolute;
     padding: 10px;
     margin: 10px 0px;
   }
-
+  .button_modal {
+    max-width: 70%;
+    padding: 10px 10px;
+    margin: 10px 0px 30px 0px;
+  }
 }
