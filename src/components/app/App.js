@@ -57,6 +57,7 @@ export function App() {
 					cheapestProduct={cheapestProduct}
 				/>
 			)}
+			
 			<><Modal2 toggleModal={toggleModal} isOpen={modal }>
 				<ModalCard productBuy={productBuy[0]}  toggleModal={toggleModal}/>
 			</Modal2>

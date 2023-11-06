@@ -15,12 +15,7 @@ export const ModalCheap = ({ isOpen, toggleModalCheap, cheapestProduct }) => {
           <ModalCard
             productBuy={cheapestProduct}
             toggleModal={toggleModalCheap}
-          >
-            <div
-              onClick={toggleModalCheap}
-              className={style.escape_modal}
-            ></div>
-          </ModalCard>
+          ></ModalCard>
         </>,
         portal
       )
