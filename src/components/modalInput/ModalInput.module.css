@@ -23,7 +23,7 @@
 .button_modal {
   width: 288px;
   border: 1px solid #00000086;
-  position:relative;
+  position: relative;
   border-radius: 16px;
   padding: 15px;
   text-transform: uppercase;
@@ -37,42 +37,39 @@
   background-color: #4bcfa0;
   color: white;
   border: 1px solid #4bcfa0;
-  
 }
 
-
 .button_modal:hover .arrow_right {
-	content: "";
-display: inline-block;
-position: relative;
-	width: 14px;
-	height: 2px;
-	background-color:rgb(255, 255, 255);
-	margin: 0px 0px 5px 10px;
-	border-radius:2px;
-	top:0;
- }
- .arrow_right:before,.arrow_right:after{
-	content: "";
-display: inline-block;
-position: absolute;
-	width: 8px;
-	height: 2px;
-	border-radius:2px;
-	background-color:rgb(255, 255, 255);
-
-	
- }
- .arrow_right:before{
-	top:-2px;
-	right:-1px ;
-	transform: rotate(45deg);
- }
- .arrow_right::after{
-	top:2px;
-	right:-1px;
-	transform: rotate(-45deg);
- }
+  content: "";
+  display: inline-block;
+  position: relative;
+  width: 14px;
+  height: 2px;
+  background-color: rgb(255, 255, 255);
+  margin: 0px 0px 5px 10px;
+  border-radius: 2px;
+  top: 0;
+}
+.arrow_right:before,
+.arrow_right:after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  width: 8px;
+  height: 2px;
+  border-radius: 2px;
+  background-color: rgb(255, 255, 255);
+}
+.arrow_right:before {
+  top: -2px;
+  right: -1px;
+  transform: rotate(45deg);
+}
+.arrow_right::after {
+  top: 2px;
+  right: -1px;
+  transform: rotate(-45deg);
+}
 
 @media (max-width: 630px) {
   .modal_body {
@@ -96,5 +93,4 @@ position: absolute;
     padding: 10px;
     margin: 10px 0px;
   }
-
 }

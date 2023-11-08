@@ -6,7 +6,7 @@ import { Modal } from "../Modal/Modal";
 import { ModalCard } from "../ModalCard/ModalCard";
 import { getData } from "../../Api";
 import { Spinner } from "../Spinner/Spinner";
-// import { ModalCheap } from "../ModalCheap/ModalCheap";
+
 
 export function App() {
   const [products, setProducts] = useState([]);
@@ -33,10 +33,11 @@ export function App() {
 
   const cheapestProduct = () => {
     let cheap = [];
-    const cheapItem = products.reduce((a, b) => {
-      return a.price < b.price ? a : b;
-    });
-    cheap.push(cheapItem);
+    cheap.push(
+      products.reduce((a, b) => {
+        return a.price < b.price ? a : b;
+      })
+    );
     setProductBuy(cheap);
   };
   console.log(productBuy);
