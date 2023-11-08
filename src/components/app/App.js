@@ -6,7 +6,7 @@ import { Modal } from "../Modal/Modal";
 import { ModalCard } from "../ModalCard/ModalCard";
 import { getData } from "../../Api";
 import { Spinner } from "../Spinner/Spinner";
-// import { ModalCheap } from "../ModalCheap/ModalCheap";
+
 
 export function App() {
   const [products, setProducts] = useState([]);
